@@ -4,3 +4,5 @@
 
 /Code review/*/obj
 /Code review/*/bin/Debug/*
+*.suo
+/.vs/VSWorkspaceState.json
