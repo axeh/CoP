@@ -4,4 +4,9 @@
     {
         return new Course();
     }
+
+    public Task SaveAsync()
+    {
+        throw new NotImplementedException();
+    }
 }

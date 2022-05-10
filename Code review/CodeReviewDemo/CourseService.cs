@@ -31,5 +31,6 @@
         response.EnsureSuccessStatusCode();
 
         c.Students.Add(student);
+        await repository.SaveAsync();
     }
 }
