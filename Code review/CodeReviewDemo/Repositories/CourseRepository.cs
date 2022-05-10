@@ -1,4 +1,5 @@
-﻿internal class CourseRepository : ICourseRepository
+﻿// See https://aka.ms/new-console-template for more information
+internal class CourseRepository : ICourseRepository
 {
     public Course Find(int id)
     {
@@ -7,6 +8,6 @@
 
     public Task SaveAsync()
     {
-        throw new NotImplementedException();
+       return Task.CompletedTask;
     }
 }
