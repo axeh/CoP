@@ -1,10 +1,10 @@
 ﻿internal class CourseService
 {
-    private readonly ICourseRepository repository;
+    private readonly ICourseRepository courseRepository;
 
-    public CourseService(ICourseRepository repository)
+    public CourseService(ICourseRepository courseRepository)
     {
-        this.repository = repository;
+        this.courseRepository = courseRepository;
     }
 
     public async Task Add(int id, Student student)
@@ -19,7 +19,7 @@
             throw new ArgumentNullException(nameof(student));
         }
 
-        var c = repository.Find(id);
+        var c = courseRepository.Find(id);
 
         if (c.Students.Any(x => x.Id == student.Id))
         {
@@ -31,6 +31,6 @@
         response.EnsureSuccessStatusCode();
 
         c.Students.Add(student);
-        await repository.SaveAsync();
+        await courseRepository.SaveAsync();
     }
 }
